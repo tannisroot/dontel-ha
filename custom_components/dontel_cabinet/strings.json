@@ -1,0 +1,46 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "ДонТел personal cabinet",
+        "description": "Enter the address of the cabinet. Login happens automatically by IP address; no username or password is needed."
+      },
+      "reauth_confirm": {
+        "title": "The cabinet no longer recognizes this IP",
+        "description": "Your home IP address changed and {url} no longer logs Home Assistant in automatically. Make sure the address is still correct and try again."
+      },
+      "reconfigure": {
+        "title": "Reconfigure the cabinet"
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not fetch the cabinet page.",
+      "not_logged_in": "The cabinet refused the automatic IP-based login.",
+      "parse_error": "The Баланс value was not found on the cabinet page.",
+      "invalid_url": "Invalid cabinet address."
+    },
+    "abort": {
+      "already_configured": "The cabinet is already configured.",
+      "reauth_successful": "Re-authentication successful.",
+      "unique_id_mismatch": "This cabinet is already configured."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "balance": {
+        "name": "Balance"
+      }
+    }
+  },
+  "exceptions": {
+    "cannot_connect": {
+      "message": "Could not reach the personal cabinet."
+    },
+    "not_logged_in": {
+      "message": "The personal cabinet did not log this client in by IP address (the address may have changed)."
+    },
+    "parse_error": {
+      "message": "Could not extract the Баланс value from the personal cabinet page."
+    }
+  }
+}
